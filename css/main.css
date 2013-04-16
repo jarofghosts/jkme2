@@ -1,3 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html { height: 100.1%; }
 body {
   background: #e9e9e9;
+  color: #222;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arvo', Georgia, Times, serif;
+}
+header {
+  position: fixed;
+  width: 100%;
+}
+header > img {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+header > h1 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  font-size: 2.5em;
+  font-weight: normal;
+  margin-left: 25px;
+}
+p {
+  margin: 2% 10%;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+a {
+  color: #008357;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+header {
+  background: #fdfdfd;
+  box-shadow: 1px 1px 3px #fff;
 }
