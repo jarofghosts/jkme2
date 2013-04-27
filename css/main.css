@@ -1,30 +1,55 @@
+/*
+=================
+Pallete:
+
+  rgb(217, 205, 168)
+
+  rgb(64, 37, 14)
+  rgb(181, 133, 40)
+=================
+*/
 * {
   margin: 0;
   padding: 0;
 }
-html { height: 100.1%; }
+html, body { height: 100%; }
 body {
-  background: #e9e9e9;
-  color: #222;
+  background: rgb(181, 133, 40);
+  color: rgb(217, 205, 168);
+  overflow: hidden;
+}
+section:hover {
+  transition: all .3s ease-in-out;
+  -webkit-transform: scale(1.01);
+}
+section {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 50%;
+  width: 50%;
+  padding: 5%;
+  text-align: center;
+}
+section.left {
+  float: left;
+}
+section.right {
+  float: right;
+}
+section.top.left, section.bottom.right {
+  background: rgb(64, 37, 14);
+  color: rgb(181, 133, 40);
+}
+section.top.right, section.bottom.left {
+  background: rgb(181, 133, 40);
+  color: rgb(64, 37, 14);
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Arvo', Georgia, Times, serif;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
-header {
-  position: fixed;
-  width: 100%;
-}
-header > img {
-  margin-top: 5px;
-  margin-left: 5px;
-}
-header > h1 {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 10px;
-  font-size: 2.5em;
-  font-weight: normal;
-  margin-left: 25px;
+h1.blog-title {
+  text-align: center;
+  font-weight: bold;
 }
 p {
   margin: 2% 10%;
@@ -36,8 +61,4 @@ a {
   color: #008357;
   text-decoration: none;
   border-bottom: 1px solid;
-}
-header {
-  background: #fdfdfd;
-  box-shadow: 1px 1px 3px #fff;
 }
