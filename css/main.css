@@ -1,19 +1,26 @@
 * {
   border: 0;
   margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 html, body {
   overflow: hidden;
   height: 100%;
   width: 100%;
+  display: block;
+  position: relative;
 }
 section {
-  transition: all 0.5s ease-in-out;
   float: left;
+  z-index: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  display: inline-block;
   height: 100%;
   width: 50%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
   position: relative;
 }
 section.left {
@@ -23,11 +30,15 @@ section.right {
   background: #edb966;
 }
 section div {
+  font-family: 'Vollkorn', serif;
+  text-align: center;
   font-size: 5em;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 33%;
+  left: 33%;
 }
 section:hover {
+  z-index: 1;
   -webkit-transform: scale(1.1);
+  box-shadow: 0 2px 10px #454545;
 }
