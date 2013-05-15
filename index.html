@@ -2,69 +2,14 @@
 <html>
   <head>
     <title>Jesse Keane is me and I am him.</title>
-    <link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div class="container">
-      <section class="top left">
-        <h1>About</h1>
-        <article class="content">
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent arcu felis, fermentum ut scelerisque consectetur, porttitor ac velit. Vestibulum convallis, nisi non sodales porttitor, eros mi egestas velit, a venenatis nisi lacus in dui. Proin gravida sagittis dui vitae cursus. Etiam lobortis, diam molestie dictum tristique, lectus felis condimentum dui, quis varius metus magna eget elit. Nullam a auctor justo. Proin ullamcorper ultrices leo, non vulputate nunc gravida nec. Nam ultricies consectetur interdum. Nam quis eros id dolor porttitor cursus a sed felis. Nunc quis ipsum sed tortor condimentum accumsan non sit amet elit.</p>
-<p>
-Quisque luctus sollicitudin est nec eleifend. Sed iaculis lobortis augue sed rutrum. Fusce ultricies lacinia nisi, quis mollis dolor consectetur a. Nullam semper, odio nec lacinia semper, elit urna sodales nisi, dictum congue velit quam sed lectus. Nulla vestibulum lacus nec massa varius ullamcorper. Maecenas ac mi vitae quam posuere facilisis in euismod libero. Ut egestas viverra tortor, sed gravida odio tincidunt a. Nunc elit augue, dignissim vel cursus sed, rhoncus eu ante. Mauris sagittis urna sapien, id iaculis ante. Aenean ultrices tellus ac velit condimentum venenatis. Donec at purus nec ipsum tincidunt sollicitudin. In elementum neque ipsum, ut feugiat ipsum. In nibh metus, suscipit a porttitor quis, sagittis in ipsum.</p>
-<p>
-Donec ullamcorper mollis faucibus. Integer aliquam faucibus arcu sit amet vestibulum. Nunc consequat lacinia diam, non luctus elit imperdiet ac. Proin facilisis metus tempor risus ornare gravida. Nulla tincidunt pretium diam sagittis facilisis. Quisque felis neque, mattis ut molestie eu, egestas eget enim. Nam vestibulum laoreet gravida. Morbi feugiat nisi ac lacus facilisis varius. Suspendisse lacinia ultrices odio, et rutrum sem malesuada et. Cras sagittis dictum pellentesque. Praesent accumsan tristique dapibus. Aenean quis risus vel augue pulvinar vehicula non id nunc. Aenean ultrices, nisl ac porttitor pharetra, lorem massa blandit mauris, a dictum libero metus vestibulum massa. Vivamus eu purus vitae arcu semper tempor.
-</p>
-<p>
-Cras et sem at orci tempus commodo. Sed consequat tincidunt lacinia. Vestibulum feugiat neque eu tellus tempor ultricies. Nunc ipsum dolor, cursus non porta eu, pharetra vitae magna. Suspendisse sed vulputate magna. Suspendisse scelerisque posuere augue ut ultricies. Praesent pretium varius massa vitae mattis. In quis elit pretium lorem cursus ultrices. Phasellus faucibus mi vitae erat ullamcorper quis consectetur est venenatis. Aliquam porttitor sagittis nibh mattis condimentum.</p>
-        </article>
-      </section>
-      <section class="top right">
-        <h1>Projects</h1>
-      </section>
-      <section class="bottom left">
-        <h1>Pictures</h1>
-      </section>
-      <section class="bottom right">
-        <h1>Contact Me</h1>
-        <article>
-          Your Name: <input type="text"><br>
-          Your Contact: <input type="email"><br>
-          Your Message: <br>
-          <textarea></textarea><br>
-          <a href="#">SUBMIT</a>
-        </article>
-      </section>
-    </div>
+    <section class="left">
+      <div>Words</div>
+    </section>
+    <section class="right">
+      <div>Projects</div>
+    </section>
   </body>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-  <script>
-  ;(function ($) {
-
-    var $sections = $("section"),
-      previousClasses = '';
-
-    $(function () {
-
-      $(document).on('click', 'section:not(".active")', function () {
-        var $this = $(this);
-
-        if (previousClasses.length) {
-          $('.active').removeClass('active').addClass(previousClasses);
-        }
-
-        previousClasses = this.getAttribute('class');
-
-        $(this).removeClass(previousClasses).addClass('active');
-        $('section').not('.active').removeClass('top left bottom right').addClass('inactive');
-
-      });
-
-    });
-
-  }(jQuery));
-  </script>
 </html>

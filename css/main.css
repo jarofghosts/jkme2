@@ -1,110 +1,33 @@
-/*
-=================
-Pallete:
-
-  rgb(217, 205, 168)
-  rgb(64, 37, 14)
-  rgb(181, 133, 40)
-=================
-*/
 * {
+  border: 0;
   margin: 0;
-  padding: 0;
 }
-html, body { height: 100%; }
-body {
+html, body {
   overflow: hidden;
-}
-div.container {
   height: 100%;
-  display: block;
-  position: relative;
-}
-section:not(.active, .inactive):hover {
-  transition: all .3s ease-in-out;
-  -webkit-transform: scale(1.01);
-}
-section:not(.active) > article {
-  display: none;
-}
-article {
-  text-align: left;
-}
-section.inactive:hover {
-  transition: all .3s ease-in-out;
-  background: rgb(189, 195, 199);
-  color: rgb(52, 73, 94);
-  -webkit-transform: scale(1.1);
+  width: 100%;
 }
 section {
-  box-sizing: border-box;
-  height: 50%;
+  transition: all 0.5s ease-in-out;
+  float: left;
+  height: 100%;
   width: 50%;
-  padding: 5%;
-  text-align: center;
-  display: block;
-  position: absolute;
-}
-section.active {
-  transition: all .3s ease-in-out;
-  width: 100%;
-  height: 90%;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-section.inactive {
-  transition: all .3s ease-in-out;
-  bottom: 0;
-  width: 33.33%;
-  height: 10%;
-  background: rgb(149, 165, 166);
-  color: rgb(44, 62, 80);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
 }
 section.left {
-  left: 0;
+  background: #dfe2e2;
 }
 section.right {
+  background: #edb966;
+}
+section div {
+  font-size: 5em;
+  position: absolute;
+  top: 50%;
   left: 50%;
 }
-section.bottom {
-  top: 50%;
-}
-section.top {
-  top: 0;
-}
-section:not(.inactive):nth-child(1), section:not(.inactive):nth-child(4) {
-  background: rgb(44, 62, 80);
-  color: rgb(22, 160, 133);
-}
-section:not(.inactive):nth-child(2), section:not(.inactive):nth-child(3) {
-  background: rgb(22, 160, 133);
-  color: rgb(44, 62, 80);
-}
-section.inactive:nth-child(1) {
-  left: 0;
-}
-section.inactive:nth-child(2) {
-  left: 33.33%;
-}
-section.inactive:nth-child(3) {
-  left: 66.66%;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
-}
-h1.blog-title {
-  text-align: center;
-  font-weight: bold;
-}
-p {
-  margin: 2% 10%;
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-}
-a {
-  color: #008357;
-  text-decoration: none;
-  border-bottom: 1px solid;
+section:hover {
+  -webkit-transform: scale(1.1);
 }
