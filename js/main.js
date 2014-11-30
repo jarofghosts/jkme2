@@ -1,15 +1,22 @@
-!function ($) {
+!function() {
+  var previous
 
-  $(function () {
+  document.addEventListener('mouseover', justAnchor(function(el) {
+    var zIndex = previous ? +previous.style.zIndex : 0
 
-    $(document)
-      .on('mouseenter', 'a', function () {
-        this.style.zIndex = 2;
-      })
-      .on('mouseleave', 'a', function () {
-        this.style.zIndex = 1;
-      });
+    previous = el
+    el.style.zIndex = zIndex + 1
+  }))
 
-  });
+  function justAnchor(fn) {
+    return function(ev) {
+      var el = ev.target
 
-}(jQuery);
+      if(!el) return
+      if(el === previous) return
+      if(!el.tagName || el.tagName.toLowerCase() !== 'a') return
+
+      fn(el)
+    }
+  }
+}()
